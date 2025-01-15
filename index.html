@@ -9,9 +9,10 @@
 <script type="text/babel">
     const root = document.getElementById("root");
     function App(){
-        const [cnt, setCnt] = React.useState(0);
+        const [cnt, setCnt] = React.useState(0);//기본적으로 배열 형태로 되어있음, 기본값 0으로 설정[0, function]
         const onClick = () => {
-            setCnt(cnt +1);
+            //setCnt(cnt +1);
+            setCnt((current) => current +1);// 조금 더 안전(현재값 확실히 보장)
         };
     return(
     <div>
